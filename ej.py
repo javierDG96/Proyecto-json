@@ -15,13 +15,6 @@ def contar_canciones(prueba):
 
 	return len(canciones)
 
-	
-def contar_canciones(prueba):
-	canciones=[]
-	for i in range(0,50):
-		canciones.append(prueba["tracks"]["items"][i]["track"]["name"])
-
-	return len(canciones)
 
 	
 
