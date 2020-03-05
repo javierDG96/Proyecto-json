@@ -8,6 +8,13 @@ def listar_auto(prueba):
 			autores.append(prueba["tracks"]["items"][i]["track"]["artists"][1]["name"])
 	return set(autores)
 	
+def contar_canciones(prueba):
+	canciones=[]
+	for i in range(0,50):
+		canciones.append(prueba["tracks"]["items"][i]["track"]["name"])
+
+	return len(canciones)
+
 	
 def contar_canciones(prueba):
 	canciones=[]
