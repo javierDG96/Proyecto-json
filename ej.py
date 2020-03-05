@@ -8,10 +8,5 @@ def listar_auto(prueba):
 			autores.append(prueba["tracks"]["items"][i]["track"]["artists"][1]["name"])
 	return set(autores)
 	
-with open("canciones.json") as fichero:
-		prueba = json.load(fichero)	
-		
-		print(listar_auto(prueba))
-	
 	
 
