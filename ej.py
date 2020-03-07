@@ -16,5 +16,12 @@ def contar_canciones(prueba):
 	return len(canciones)
 
 
-	
+def dur_canciones(prueba,cancion):
+	duracion=[]
+	for i in range(0,49):
+		if prueba["tracks"]["items"][i]["track"]["name"]==cancion:
+			duracion.append(prueba["tracks"]["items"][i]["track"]["duration_ms"])
+	return duracion
+			
 
+	
