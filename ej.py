@@ -22,6 +22,14 @@ def dur_canciones(prueba,cancion):
 		if prueba["tracks"]["items"][i]["track"]["name"]==cancion:
 			duracion.append(prueba["tracks"]["items"][i]["track"]["duration_ms"])
 	return duracion
+
+def canc_artista(prueba,artista):
+	canciones=[]
+	for i in range(0,49):
+		if prueba["tracks"]["items"][i]["track"]["artists"][0]["name"] ==artista:
+			canciones.append(prueba["tracks"]["items"][i]["track"]["name"])
+	return canciones
+
 			
 
 	
