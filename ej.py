@@ -31,5 +31,15 @@ def canc_artista(prueba,artista):
 	return canciones
 
 			
+def popu_canc(prueba):
+ 	canciones=[]
+ 	tipo=[]
+ 	for i in range(0,49):
+ 		if prueba["tracks"]["items"][i]["track"]["popularity"] > 40:
+ 			canciones.append(prueba["tracks"]["items"][i]["track"]["name"])
+ 			tipo.append(prueba["tracks"]["items"][i]["track"]["album"]["album_type"])
+ 	return zip(canciones,tipo)
 
-	
+
+
+
