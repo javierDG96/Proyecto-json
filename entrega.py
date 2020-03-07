@@ -2,7 +2,7 @@ import json
 with open("canciones.json") as fichero:
 		prueba = json.load(fichero)	
 
-from ej import contar_canciones,listar_auto
+from ej import contar_canciones,listar_auto,dur_canciones
 
 while True:
     print("Menú de ejercicios")
@@ -17,5 +17,10 @@ while True:
     if opcion==1:
     	for autores in(listar_auto(prueba)):
     		print(autores)
-    if opcion==2:
+    elif opcion==2:
     	print("Hay",contar_canciones(prueba),"canciones en el documento")
+    
+    elif opcion==3:
+    	cancion=input("Dime el nombre de la cancion:")
+    	for duracion in dur_canciones(prueba,cancion):
+    		print("La duracion es",round(duracion/60000 ,2),"min")
